@@ -1,0 +1,20 @@
+*{
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.boxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid burlywood;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+}
+
+.foodbox, .moodbox {
+    border: 2px solid lightblue;
+    background-color: lightcyan;
+    border-radius: 10px;
+}

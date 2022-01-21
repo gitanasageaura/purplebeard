@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h2, p {
+    background-color: sandybrown;
+    text-align: center;
+    padding: 5px;
+}
+
+.numberbox {
+    padding: 5px;
+    border: 2px solid sandybrown;
+    padding: auto;
+    margin-left: 25px;
+}
+
+.box{
+    width: 300px;
+    height: auto;
+    border: 3px solid peru;
+    border-radius: 15%;
+    padding: 20px;
+    background-color: sandybrown;
+    align-items: center;
+    margin: 50px;
+}
+
+.button {
+    font-size: medium;
+    color: black;
+    border: 2px solid seagreen;
+    border-radius: 35px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    background-color: seagreen;
+    padding: 10px;
+    text-decoration: none;
+    margin-left: 80px;
+    width: 150px;
+}
+
+button:hover{
+    background-color: slategrey;
+    color: snow;
+    border: none;
+}

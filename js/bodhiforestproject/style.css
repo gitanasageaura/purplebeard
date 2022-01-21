@@ -1,0 +1,569 @@
+
+*, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+
+/* background that moves with scroll */
+.container {
+    height: 160vh;
+    width: 98.8vw;   
+}
+
+.background{
+    width: 100%;
+    height: 150vh;
+    position: absolute;
+    object-fit: fill;
+    z-index: -1;
+}
+
+.woman{
+    position: absolute;
+    margin-left: 32em;
+    margin-top: 26rem;
+}
+
+.main-title{
+    position: absolute;
+    top: 40rem;
+    left: 32rem;
+    color: black;
+    font-size: 5rem;
+    transform: translate(-48, -50%);
+}
+
+.words{
+    position: absolute;
+    color: black;
+    font-size: 5rem;
+
+}
+
+/* navbar */
+.svglogo{
+    width:100px;
+    height:60px; 
+}
+.svgimg{
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+nav{
+    position: absolute;
+    width: 100%;
+    background-color: hsl(75, 10%, 40%);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+
+}
+.logo{
+    padding: 20px 60px 20px 30px;
+    font-weight: 900;
+    font-size: 24px;
+    color: hsl(52, 94%, 94%);
+}
+
+.homepage{
+    text-decoration: none;
+}
+.navright{
+    color: hsl(52, 94%, 94%);
+    width: 90vh;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.navright:hover{
+    transform: scale(1);
+}
+.navright a {
+    text-decoration: none;
+    color: hsl(52, 94%, 94%);
+    font-weight: 600;
+    padding: 14px 8px;
+    float: right;
+} 
+.content{
+    background-color: hsl(75, 10%, 40%);
+    width: 100%;
+}
+
+/* main content with welcome page */
+.page{
+    z-index: 2;
+    position: absolute;
+    background-color: hsl(60,12%,68%)
+}
+
+.maincontent{
+    position: absolute;
+    text-align: left;
+    padding: 60px;
+    margin: 10px;
+    width: 100%;
+}
+
+.welcome{
+    font-size: 48px;
+    color: hsl(21,43%,65%);
+    margin: 30px 10px 50px 40px;
+}
+
+.maintext{
+    font-size: 18px;
+    margin: 30px 10px 50px 40px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.mainimg{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50rem;
+}
+
+.signupbtn{
+    text-decoration: none;
+    color: hsl(26, 100%, 92%);
+    background-color: hsl(21,43%,65%);
+    padding: 10px 40px;
+    border: 0px solid hsl(21,43%,65%);
+    border-radius: 6px;
+    margin: 40px 10px 50px 40px;
+    font-weight: 900;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.signupbtn:hover{
+    color: hsl(21,43%,65%);
+    background-color: hsl(24,43%,76%);
+}
+
+/* image section for users to click mind, body or spirit and be directed to the appropriate webpage */
+.gallerytitle{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 20px;
+    color: hsl(75, 10%, 40%);
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(52, 94%, 94%);
+}
+
+.mind, .body, .spirit{
+    justify-content: space-between;
+    align-items: center;
+}
+.mind, .body, .spirit {
+    position: relative;
+    width: 450px;
+}
+
+.mindimage, .bodyimage, .spiritimage{
+    display: block;
+    width: 100%;
+}
+
+/* blur effect when hovering over image */
+.mindoverlay, .bodyoverlay, .spiritoverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.9s;
+    backdrop-filter: blur(3px);
+}
+
+.mindoverlay:hover{
+    opacity: 1;
+}
+.bodyoverlay:hover{
+    opacity: 1;
+}
+.spiritoverlay:hover{
+    opacity: 1;
+}
+
+/* text on hover */
+.mindoverlaytext, .bodyoverlaytext, .spiritoverlaytext {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* description box */
+.subtitle{
+    text-align: center;
+    background-color: hsl(60,12%,68%);
+    padding: 10px;
+    margin-top: -4px;
+    color: hsl(75, 10%, 40%);
+    font-weight: 800;
+    font-size: 24px;
+}
+
+/* quote section */
+.quote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(24,43%,76%);
+    height: 200px;
+}
+
+.quotetext{
+    text-align: center;
+    align-items: center;
+    margin: 60px 80px;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.acknowledgement{
+    text-align: right;
+    margin-left: 50em;
+    margin-top: -50px;
+    font-weight: 600;
+}
+
+/* signup reminder section */
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.signupbox{
+    background-color: rgb(165, 165, 141);
+    border: 0px;
+    border-radius: 15px;
+    width: 90vw;
+    height: 150px;
+    display: flex;
+}
+
+.signuptext{
+    text-align: left;
+    margin: 3em 1em 1em 4em;
+    font-weight: 400;
+    font-size: 20px;
+    width: 50vw;
+}
+
+.two {
+    text-decoration: none;
+    color: hsl(26, 100%, 92%);
+    background-color: hsl(21,43%,65%);
+    padding: 10px 40px;
+    border: 2px solid hsl(26, 100%, 92%);
+    border-radius: 6px;
+    margin: 3em 1em 3.5em 12em;
+    font-weight: 900;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+    
+.two:hover{
+    color: hsl(21,43%,65%);
+    background-color: hsl(24,43%,76%);
+    border: 2px solid hsl(21,43%,65%);
+}
+
+
+/* footer for copy right */
+/* might add links to pages in this section not sure yet */
+footer{
+    background-color: hsl(75, 10%, 40%);
+    padding: 25px;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+.footertext{
+    color: hsl(52, 94%, 94%);
+    position: relative;
+    text-align: center;
+}  
+
+/* mind page */
+.mind1, .body1{
+    position: absolute;
+    top: 10rem;
+    left: 15rem;
+    color: black;
+    font-size: 5rem;
+    transform: translate(-48, -50%);
+}
+span{
+    color: hsl(75, 10%, 40%)
+}
+.meditationtitle, .yogatitle{
+    color: black;
+    position: absolute;
+    top: 20rem;
+    left: 8rem;
+    font-size: 3rem;
+}
+.meditationpara, .yogapara{
+    color: black;
+    position: absolute;
+    top: 25rem;
+    left: 8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 70rem;
+    text-align: left;
+}
+
+.walkingmed{
+    color: black;
+    position: absolute;
+    top: 30rem;
+    left: 8rem;
+    font-size: 1.5rem;
+}
+.walkingpara{
+    color: black;
+    position: absolute;
+    top: 34rem;
+    left: 8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 30rem;
+    text-align: left;
+}
+.mindpage, .bodypage{
+    background-color: hsl(52, 94%, 95%);
+}
+
+.meditationimg{
+    position: absolute;
+    top: 30rem;
+    left: 52rem;
+}
+.walkingmeditationimg{
+    position: absolute;
+    top: 40rem;
+    left: 8rem;
+}
+
+.mindpage{
+    height: 130vw;
+}
+
+.walkingillustration{
+    position: absolute;
+    top: 40rem;
+    left: 30rem;
+}
+
+/* weather widget */
+.introtoweather{
+    color: black;
+    position: absolute;
+    top: 59rem;
+    left: 52rem;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 30rem;
+    text-align: left;
+    width: 25rem;
+}
+
+.arrow{
+    position: absolute;
+    top: 61rem;
+    left: 61rem;
+}
+
+
+/* mainbox */
+.weatherbox{
+    background-image: url(https://source.unsplash.com/1600x900?nature);
+    height: 600px;
+    width: 69rem;
+    position: relative;
+    top: 70em;
+    left: 8em;
+    padding: 3em;
+    box-sizing: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* weatherbox */
+.card{
+    background:#6b705cd0;
+    color: white;
+    padding: 2em;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 520px;
+    margin: 1em;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.searchbtn{
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 46px;
+    width: 46px;
+    outline: none;
+    background: #1110102b;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.searchbtn:hover{
+    background: #1110106b;
+}
+
+input.search-bar{
+    border: none;
+    outline: none;
+    padding: 0.5em 1.5em;
+    border-radius: 24px;
+    background: #1110102b;
+    color: white;
+    font-family: inherit;
+    font-size: 120%;
+    width: 90%;
+}
+
+::placeholder{
+    color: white;
+}
+
+.temp{
+    padding: 10px 0px;
+    margin: 0;
+    font-size: 30px;
+}
+hide the dummy text
+
+.weathercard.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weathercard.loading:after {
+    visibility: visible;
+    content: "Loading weather for your city...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body page */
+
+.yogapara{
+    width: 40rem;
+    top: 28rem;
+}
+
+.yogaimg{
+    position: absolute;
+    top: 18rem;
+    left: 53rem;
+}
+
+.hathayoga{
+    color: black;
+    position: absolute;
+    top: 47rem;
+    left: 8rem;
+    font-size: 1.5rem;
+}
+
+.hathapara{
+    color: black;
+    position: absolute;
+    top: 50rem;
+    left: 8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 30rem;
+    text-align: left;
+}
+
+.hathaimg{
+    position: absolute;
+    top:48rem;
+    left: 53rem;
+}
+
+
+/* spirit page */
+
+
+
+/* shop */
+
+
+
+
+/* contact */

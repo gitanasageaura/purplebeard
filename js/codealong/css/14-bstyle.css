@@ -1,0 +1,34 @@
+body {
+  background-color: antiquewhite;
+}
+
+#navContainer ul {
+  display: flex;
+  max-width: 80vw;
+}
+
+#navContainer ul {
+  margin: auto;
+}
+
+.mainContent {
+  width: 80vw;
+  height: 75vh;
+  background-color: cadetblue;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+.hideitem {
+  display: none;
+}
+
+#navContainer ul {
+  list-style-type: none;
+}
+
+#navContainer ul li {
+  text-decoration: none;
+  cursor: pointer;
+}
+
